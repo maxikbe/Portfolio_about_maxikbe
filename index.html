@@ -5,39 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="javascript.js"></script>
-    <title>Document</title>
+    <title>Bělunek - Portfolio</title>
 </head>
 <body>  
-    <div class="Main-Page">
-        <div class="header">
-            <a class="home-button" href="#Scroll-Pos-1"><img class="logo" src="imgs/logo.png" alt=""></a>
-            <!--Disable when screen big-->
-            <button class="menu-button" onclick="otevrit()">
-                <div></div>
+    <div class="header">
+        <a class="home-button" href="#Scroll-Pos-1"><img class="logo" src="imgs/logo.png" alt=""></a>
+        <!--Disable when screen big-->
+        <button class="menu-button" onclick="otevrit()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
+        <div class="Side-Navigation-Bar" id="sidebar">
+            <button class="menu-button-close" onclick="zavrit()">
                 <div></div>
                 <div></div>
             </button>
-            <div class="Side-Navigation-Bar" id="sidebar">
-                <button class="menu-button-close" onclick="zavrit()">
-                    <div></div>
-                    <div></div>
-                </button>
-                <img src="imgs/logo.png" alt="">
-                <a href="#Scroll-Pos-1"><p>Domů</p></a>
-                <a href="#Scroll-Pos-2"><p>O mně</p></a>
-                <a href="#Scroll-Pos-3"><p>Programování</p></a>
-                <a href="#Scroll-Pos-4"><p>Koníčky</p></a>
-                <a href="#Scroll-Pos-5"><p>Kontakty</p></a>
-            </div>
-            <!--Enable when screen big-->
-            <div class="Navigation-Bar">
-                <a href="#Scroll-Pos-1">Domů</a>
-                <a href="#Scroll-Pos-2">O mně</a>
-                <a href="#Scroll-Pos-3">Programování</a>
-                <a href="#Scroll-Pos-4">Koníčky</a>
-                <a href="#Scroll-Pos-5">Kontakty</a>
-            </div>
+            <img src="imgs/logo.png" alt="">
+            <a href="#Scroll-Pos-1"><p>Domů</p></a>
+            <a href="#Scroll-Pos-2"><p>O mně</p></a>
+            <a href="#Scroll-Pos-3"><p>Programování</p></a>
+            <a href="#Scroll-Pos-4"><p>Koníčky</p></a>
+            <a href="#Scroll-Pos-5"><p>Kontakty</p></a>
         </div>
+        <!--Enable when screen big-->
+        <div class="Navigation-Bar">
+            <a href="#Scroll-Pos-1">Domů</a>
+            <a href="#Scroll-Pos-2">O mně</a>
+            <a href="#Scroll-Pos-3">Programování</a>
+            <a href="#Scroll-Pos-4">Koníčky</a>
+            <a href="#Scroll-Pos-5">Kontakty</a>
+        </div>
+    </div>
+    <div class="Main-Page">
         <div class="Home-Page-View Main-Div" id="Scroll-Pos-1">
             <div class="MyName-Holder">
                 <h1 class="MyName">Max<br>Bělunek</h1>
@@ -52,7 +52,7 @@
                 <ul>
                     <li>Jmenuji se Max Bělunek, pocházím z Rožnova p. R. a je mi 16 let.</li>
                     <li>Baví mě programovat, hrát basketball a mám rád různé 2d a 3d hry.</li>
-                    <li>Momentálně studuji na Střední škole <a href="https://creativehill.cz">Creative Hill College</a></li>
+                    <li>Momentálně studuji na Střední škole <a class="odkaz" href="https://creativehill.cz">Creative Hill College</a></li>
                 </ul>
             </div>
         </div>

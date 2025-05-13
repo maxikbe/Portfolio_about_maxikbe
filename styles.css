@@ -2,7 +2,12 @@
     font-family: Krub;
     margin:0;
     scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 } 
+*::-webkit-scrollbar {
+    display: none;
+  }
 body{
     background: black;
 }
@@ -32,13 +37,45 @@ h1{
 /*/common/*/
 .Main-Div{
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
-
+.odkaz{
+    color: blue;
+}
+/*/---Div-Style-1 PAGE---/*/
+.Div-Style-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    flex-direction: column;
+}
+.Div-Style-1-1{
+    width: 50%;
+    height: auto;
+    padding: 15px 30px;
+    display: flex;
+    border-radius: 15px;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-shadow: 0 0 0.3px #ffffff;
+}
+.Div-Style-1-button{
+    text-align: center;
+    border-radius: 50px;
+    padding: 5px 15px;
+    background: rgb(90, 90, 90);
+    text-decoration: none;
+    font-weight: bolder;
+}
 /*/---HEADER---/*/
 .header{
+    z-index: 5;
     position: sticky;
     top: 0;
     display: flex;
@@ -46,7 +83,7 @@ h1{
     justify-content: space-between;
     align-items: center;
     height: 10vh;
-    width: 100vw;
+    width: 100%;
     background: rgba(34, 34, 34, 0.85);
 }
 .logo{
@@ -128,7 +165,7 @@ h1{
     align-items: center;
     height: 100vh;
     transition: right 0.5s ease-in-out;
-    width: 100vw;
+    width: 100%;
     right: -100vw;
     gap: 10px;
     background: rgba(40, 40, 40, 0.95);
@@ -157,6 +194,10 @@ h1{
 }
 /*/---END OF HEADER---/*/
 
+.Main-Page{
+    margin-top: -10vh;
+}
+
 /*/---HOME PAGE---/*/
 .Home-Page-View{
     flex-direction: column;
@@ -167,7 +208,8 @@ h1{
 }
 /*/Home page MyName/*/
 .MyName-Holder{
-    width: 100vw;
+    margin-top: 10vh;
+    width: 100%;
     height: auto;
     background: linear-gradient(0deg,rgba(255, 255, 255, 0) 0%, rgba(63, 63, 63, 0.72) 50%, rgba(255, 255, 255, 0) 100%);
     display: flex;
@@ -186,7 +228,7 @@ h1{
     justify-content: center;
     align-items: start;
     height: 15vh;
-    width: 100vw;
+    width: 50vw;
 }
 .arrow-down-img{
     border-radius: 50%;
@@ -203,35 +245,6 @@ h1{
         margin-top: 12vh;
     }
 }
-/*/---Div-Style-1 PAGE---/*/
-.Div-Style-1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-size: cover;
-    flex-direction: column;
-}
-.Div-Style-1-1{
-    width: 50%;
-    height: auto;
-    padding: 15px 30px;
-    display: flex;
-    border-radius: 15px;
-    flex-direction: column;
-    gap: 15px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    text-shadow: 0 0 0.3px #ffffff;
-}
-.Div-Style-1-button{
-    text-align: center;
-    border-radius: 50px;
-    padding: 5px 15px;
-    background: rgb(90, 90, 90);
-    text-decoration: none;
-    font-weight: bolder;
-}
 /*/About Page/*/
 .About-Text-Holder{
     background: rgba(202, 202, 202, 0.045);
@@ -244,6 +257,7 @@ h1{
     margin-left: -25px;
     text-align: left;
 }
+/*/backgrounds/*/
 /*/Programing Page OUT/*/
 .Programming-Page-View{
     background-image: url(imgs/Programming_bg_out.jpg);
@@ -272,6 +286,10 @@ h1{
     width: 50px;
     height: 50px;
 }
+/*/---END OF HOME PAGE---/*/
+
+
+/*/---PROGRAMING PAGE---/*/
 /*/Programming Page IN/*/
 .About-Programming-Page{
     background-image: url(imgs/Programming_bg_in.jpg);
@@ -296,6 +314,10 @@ h1{
 .About-Python-Text-Holder{
     background:linear-gradient(0deg,rgba(0, 0, 0, 0) 0%,rgba(147, 147, 147, 0.366) 80%);
 }
+/*/---END OF PROGRAMMING PAGE---/*/
+
+
+/*/---PYTHON PAGE---/*/
 /*/Python Page IN/*/
 .Python-Home-Page{
     background-image: url(imgs/Python_bg_in.jpg);
@@ -313,7 +335,202 @@ h1{
     align-items: center;
     flex-direction: column;
 }
-/*/Python - The Maze/*/
+
+
+
+/*/Python Projects/*/
+/*/Maze/*/
+.Python-Maze-Page{
+    gap:35px;
+    background: linear-gradient(0deg, rgb(34, 34, 34)0%, black 100%);
+    align-items: center;
+    justify-content: center;
+}
+/*/GameOfLife/*/
+.Python-GameOfLife-Page{
+    background: linear-gradient(0deg, black 0%, rgb(34, 34, 34)100%);
+    gap: 35px;
+    align-items: center;
+    justify-content: center;
+}
+.Python-Nadpis{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+/*/projects common adjustments/*/
+.Python-images{
+    display: flex;
+    flex-direction: row;
+    gap:25px
+}
+.Python-images img{
+    width: 25vh;
+    height: 30vh;
+}
+.download{
+    width: 70vw;
+    text-align: center;
+}
+/*/Python projects responsivity adjustments/*/
+@media screen and (max-width: 320px) {
+    .Python-images img{
+        width: 15vh;
+        height: 20vh;
+    }
+}
+/*/---END OF PYTHON PAGE---/*/
+
+
+/*/---HOBIES PAGE--/*/
+/*/Hobies main page/*/
+.Hobies-Main-Page{
+    background-image: url(imgs/Hobies_bg_in.jpg);
+    background-size: cover;
+    background-position:top;
+}
+@media screen and (min-width: 500px){
+    .Hobies-Main-Page{
+        background-size:cover;
+        background-position:center;
+    }
+}
+.Hobies-Page-text-holder{
+    background: linear-gradient(0deg,black,rgba(128, 128, 128, 0));
+    backdrop-filter: blur(1px);
+}
+/*/Hobies photos/*/
+.Hobies-Photos-Page{
+    background-image: url(imgs/Photos_bg.jpg);
+    background-position: center;
+}
+.Hobies-Photos-text-holder{
+    background-color: rgba(255, 255, 255, 0.269);
+    backdrop-filter: blur(1px);
+}
+.Hobies-Photos-text-holder p, .Hobies-Photos-text-holder h2{
+    color: black;
+    text-shadow: 0 0 0.3px #000000;
+}
+.Photos-more-button{
+    background: rgb(59, 59, 59);
+    border-radius: 50px;
+    padding: 5px 15px;
+    text-decoration: none;
+}
+/*/Hobies photos-food/*/
+.Hobies-Food-Page{
+    background-image: url(imgs/Photos_food_bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.Hobies-Food-text-holder{
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.828));
+}
+.Hobies-Food-text-holder h2, .Hobies-Food-text-holder p{
+    color:rgb(0, 0, 0);
+    text-shadow: 0 0 0.3px #000000;
+}
+.Food-more-button{
+    background: rgb(50, 50, 50);
+    border-radius: 50px;
+    padding: 5px 15px;
+    text-decoration: none;
+}
+/*/END OF HOBIES PAGE/*/
+
+
+/*/PHOTOS / FOOD PHOTOS - PAGE/*/
+/*/Backgrounds/*/
+/*/photos/*/
+.photo-1{
+    background-image: url(imgs/Photo-1.jpg);
+}
+.photo-2{
+    background-image: url(imgs/Photo-2.jpg);
+}
+.photo-3{
+    background-image: url(imgs/Photo-3.jpg);
+}
+/*/food/*/
+.foodphoto-1{
+    background-image: url(imgs/Photo-food-1.jpg);
+}
+.foodphoto-2{
+    background-image: url(imgs/Photo-food-2.jpg);
+}
+.foodphoto-3{
+    background-image: url(imgs/Photo-food-3.jpg);
+}
+/*/Images/*/
+/*/photos/*/
+.photo-1-img{
+    width: 80vw;
+    height: 90vw;
+    max-width: 355px;
+    max-height: 400px;
+}
+.photo-2-img{
+    width: 80vw;
+    height: 88vw;
+    max-width: 355px;
+    max-height: 390px;
+}
+.photo-3-img{
+    width: 80vw;
+    height: 80vw;
+    max-width: 355px;
+    max-height: 355px;
+}
+/*/food/*/
+.foodphoto-1-img{
+    width: 78vw;
+    height: 50vw;
+    max-height: 225px;
+    max-width: 340px;
+}
+.foodphoto-2-img{
+    width: 70vw;
+    height: 40vw;
+    max-height: 180px;
+    max-width: 320px;
+}
+.foodphoto-3-img{
+    width: 70vw;
+    height: 35vw;
+    max-height: 150px;
+    max-width: 320px;
+}
+/*/photo-3 text color change/*/
+.photo-3 div h3, .photo-3 div p{
+    color: rgb(14, 9, 58)
+}
+/*/common adjustments/*/
+.Photos-pages{
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+}
+.img-holder{
+    font-weight: bolder;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-holder img{
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+.img-holder h3{
+    font-size: clamp(1rem, 0.8901rem + 1.7582vw, 3rem);
+}
+/*/END OF PHOTOS / FOOD PHOTOS - PAGE/*/
+
 @media screen and (min-width: 769px) {
     .Side-Navigation-Bar{
         display: none;
